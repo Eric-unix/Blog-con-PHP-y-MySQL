@@ -20,6 +20,14 @@ function limpiarDatos($datos){
 function pagina_actual(){
     return isset($_GET['p']) ? (int)$_GET['p'] : 1;
 }
+function numero_paginas($post_por_pagina, $conexion){
+    $total_post = $conexion->prepare('SELECT FOUND_ROWS() as total');
+    $total_post->execute();
+    $total_post = $total_post->fetch()['total'];
+
+    $numero_paginas = ceil($total_post / $post_por_pagina);
+    return $numero_paginas;
+}
 
 function obtener_post($post_por_pagina, $conexion){
     $inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
