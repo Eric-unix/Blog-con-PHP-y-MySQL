@@ -1,5 +1,5 @@
 <?php
-define('RUTA', 'http://localhost/Blog/');
+define('RUTA', 'http://localhost/blog/');
 $bd_config= array(
     'basedatos'=>'blog',
     'usuario'=>'root',
