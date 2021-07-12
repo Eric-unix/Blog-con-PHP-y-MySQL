@@ -1,6 +1,7 @@
+<?php $numero_paginas = numero_paginas($blog_config['post_por_pagina'], $conexion); ?>
 <section class="paginacion">
     <ul>
-    <?php if (pagina_actual() === 1) : ?>
+        <?php if (pagina_actual() === 1) : ?>
             <li class="disabled">&laquo;</li>
         <?php else: ?>
             <li><a href="index.php?p=<?php echo pagina_actual() - 1 ?>">&laquo;</a></li>
@@ -20,5 +21,6 @@
         <?php else: ?>
             <li><a href="index.php?p=<?php echo pagina_actual() + 1 ?>">&raquo;</a></li>
         <?php endif; ?>
+     
     </ul>
 </section> 
