@@ -87,6 +87,7 @@ header .buscar input[type="text"]:focus {
 	color:#fff;
 	border:1px solid #fff;
 }
+
 header .buscar .icono {
 	color:rgba(255,255,255,.7);
 	position: absolute;
