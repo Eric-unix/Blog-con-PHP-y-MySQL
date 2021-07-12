@@ -1,5 +1,5 @@
 <?php
-define('RUTA', 'http://localhost/Blog');
+define('RUTA', 'http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=blog');
 $bd_config= array(
     'basedatos'=>'blog',
     'usuario'=>'root',
